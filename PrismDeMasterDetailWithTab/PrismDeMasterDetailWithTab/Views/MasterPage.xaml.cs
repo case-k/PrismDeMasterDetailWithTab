@@ -2,9 +2,9 @@
 
 namespace PrismDeMasterDetailWithTab.Views
 {
-    public partial class MainPage : TabbedPage
+    public partial class MasterPage : ContentPage
     {
-        public MainPage()
+        public MasterPage()
         {
             InitializeComponent();
         }

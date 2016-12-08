@@ -1,5 +1,6 @@
 ﻿using Prism.Unity;
 using PrismDeMasterDetailWithTab.Views;
+using Xamarin.Forms;
 
 namespace PrismDeMasterDetailWithTab
 {
@@ -11,12 +12,18 @@ namespace PrismDeMasterDetailWithTab
         {
             InitializeComponent();
 
-            NavigationService.NavigateAsync("MainPage?title=Hello%20from%20Xamarin.Forms");
+            NavigationService.NavigateAsync("MainPage");
         }
 
         protected override void RegisterTypes()
         {
+            Container.RegisterTypeForNavigation<NavigationPage>();
+
             Container.RegisterTypeForNavigation<MainPage>();
+            Container.RegisterTypeForNavigation<MDRootPage>();
+            //Container.RegisterTypeForNavigation<MasterPage>();  // 無くていいっぽい
+            Container.RegisterTypeForNavigation<DetailPage>();
+            Container.RegisterTypeForNavigation<SubPage>();
         }
     }
 }

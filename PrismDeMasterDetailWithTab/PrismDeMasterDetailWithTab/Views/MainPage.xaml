@@ -1,11 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:views="clr-namespace:PrismDeMasterDetailWithTab.Views;assembly=PrismDeMasterDetailWithTab"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="PrismDeMasterDetailWithTab.Views.MainPage"
              Title="MainPage">
-  <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-    <Label Text="{Binding Title}" />
-  </StackLayout>
-</ContentPage>
+
+
+  <TabbedPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0"/>
+  </TabbedPage.Padding>
+
+
+  <TabbedPage.Children>
+
+    <!--page参照-->
+    <views:MDRootPage Title="Page 1" Icon="user.png"/>
+
+    <!--直書き-->
+    <ContentPage Title="Page 2" Icon="users.png" BackgroundColor="#eeffee">
+      <Label Text="ここは Page 2 です"
+             TextColor="#666666"
+             VerticalOptions="Center"
+             HorizontalTextAlignment="Center"/>
+    </ContentPage>
+
+  </TabbedPage.Children>
+  
+  
+</TabbedPage>

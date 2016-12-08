@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="PrismDeMasterDetailWithTab.Views.DetailPage"
+             Title="Detail Page">
+
+  <ContentPage.Padding>
+    <OnIdiom x:TypeArguments="Thickness" Tablet="0,0,0,50"/>
+    <!--iPadだと画面の高さにタブが考慮されないのでpaddingで調整、Xamarinのバグ？？-->
+    <!--iPhoneは大丈夫-->
+    <!--Androidは未確認-->
+  </ContentPage.Padding>
+  
+  <Label Text="メニューを選択してポチれ" FontSize="Large" HorizontalTextAlignment="Center" VerticalOptions="Center" />
+
+</ContentPage>
