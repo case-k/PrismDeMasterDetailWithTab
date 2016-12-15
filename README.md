@@ -1,0 +1,5 @@
+# PrismDeMasterDetailWithTab
+TabbedPageの中にMasterDetailPageを置いてそこからDetailPageをナビゲーションしてみた
+
+Xamarin.Forms  
+Prism.Unity.Forms
