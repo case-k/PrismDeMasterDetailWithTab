@@ -49,17 +49,17 @@ namespace PrismDeMasterDetailWithTab.ViewModels
         }
 
 
-        async private void Pochi()
+        private void Pochi()
         {
             if (SelectedMenuItem == null)
                 return;
 
-            NOW = SelectedMenuItem.Title;
+            NOW = SelectedMenuItem.Title;  // ←これが画面に反映されない
 
-            var parameters = new NavigationParameters();
-            parameters["selectedmenuitem"] = SelectedMenuItem;
+            //var parameters = new NavigationParameters();
+            //parameters["selectedmenuitem"] = SelectedMenuItem;
 
-            await _navigationService.NavigateAsync("NavigationPage/DetailPage/SubPage", parameters);
+            //await _navigationService.NavigateAsync("NavigationPage/DetailPage/SubPage", parameters);
         }
 
         private void Test()

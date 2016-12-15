@@ -16,7 +16,7 @@
   <StackLayout VerticalOptions="Center" >
     <Label Text="{Binding NOW}" FontSize="Large" HorizontalTextAlignment="Center"/>
     <Label Text="メニューを選択してポチれ" FontSize="Large" HorizontalTextAlignment="Center"/>
-    <Button Text="バインドのテスト" Command="TestCommand"/>
+    <Button Text="バインドのテスト" Command="{Binding TestCommand}"/>
   </StackLayout>
 
 </ContentPage>
