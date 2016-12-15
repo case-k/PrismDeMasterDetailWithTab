@@ -1,4 +1,5 @@
 ﻿using Prism.Unity;
+using PrismDeMasterDetailWithTab.ViewModels;
 using PrismDeMasterDetailWithTab.Views;
 using Xamarin.Forms;
 
@@ -12,7 +13,7 @@ namespace PrismDeMasterDetailWithTab
         {
             InitializeComponent();
 
-            NavigationService.NavigateAsync("MainPage");
+            NavigationService.NavigateAsync("MainPage/MDRootPage/NavigationPage/DetailPage");
         }
 
         protected override void RegisterTypes()
@@ -22,8 +23,11 @@ namespace PrismDeMasterDetailWithTab
             Container.RegisterTypeForNavigation<MainPage>();
             Container.RegisterTypeForNavigation<MDRootPage>();
             //Container.RegisterTypeForNavigation<MasterPage>();  // 無くていいっぽい
-            Container.RegisterTypeForNavigation<DetailPage>();
+            //Container.RegisterTypeForNavigation<DetailPage>();
             Container.RegisterTypeForNavigation<SubPage>();
+
+            // M/DのDのみを差し替えてみる
+            Container.RegisterTypeForNavigationOnIdiom<DetailPage, MDRootPageViewModel>("DetailPage", phoneView: typeof(DetailPage_Phone));
         }
     }
 }
