@@ -7,14 +7,22 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace PrismDeMasterDetailWithTab.ViewModels
 {
     public class MDRootPageViewModel : BindableBase
     {
+        private string _now;
+        public string NOW
+        {
+            get { return _now; }
+            set { SetProperty(ref _now, value); }
+        }
         public List<TMenuItem> MenuItems { get; }
         public TMenuItem SelectedMenuItem { get; set; }
         public ICommand PochiCommand { get; }
+        public ICommand TestCommand { get; }
 
         private INavigationService _navigationService;
 
@@ -31,6 +39,13 @@ namespace PrismDeMasterDetailWithTab.ViewModels
 
             SelectedMenuItem = null;
             PochiCommand = new DelegateCommand(Pochi);
+            TestCommand = new DelegateCommand(Test);
+
+            //Device.StartTimer(TimeSpan.FromSeconds(1), () =>
+            //{
+            //    NOW = DateTime.Now.ToString();
+            //    return true;
+            //});
         }
 
 
@@ -39,10 +54,17 @@ namespace PrismDeMasterDetailWithTab.ViewModels
             if (SelectedMenuItem == null)
                 return;
 
+            NOW = SelectedMenuItem.Title;
+
             var parameters = new NavigationParameters();
             parameters["selectedmenuitem"] = SelectedMenuItem;
 
             await _navigationService.NavigateAsync("NavigationPage/DetailPage/SubPage", parameters);
+        }
+
+        private void Test()
+        {
+            NOW = "バインドされてるっぽい";
         }
     }
 }

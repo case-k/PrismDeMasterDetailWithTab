@@ -12,7 +12,11 @@
     <!--iPhoneは大丈夫-->
     <!--Androidは未確認-->
   </ContentPage.Padding>
-  
-  <Label Text="メニューを選択してポチれ" FontSize="Large" HorizontalTextAlignment="Center" VerticalOptions="Center" />
+
+  <StackLayout VerticalOptions="Center" >
+    <Label Text="{Binding NOW}" FontSize="Large" HorizontalTextAlignment="Center"/>
+    <Label Text="メニューを選択してポチれ" FontSize="Large" HorizontalTextAlignment="Center"/>
+    <Button Text="バインドのテスト" Command="TestCommand"/>
+  </StackLayout>
 
 </ContentPage>

@@ -4,8 +4,12 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="PrismDeMasterDetailWithTab.Views.DetailPage_Phone"
-             Title="Detail Page for Phone">
+             Title="Detail for Phone">
 
-  <Label Text="メニューを選択してポチろ" FontSize="Large" HorizontalTextAlignment="Center" VerticalOptions="Center" />
+  <StackLayout VerticalOptions="Center" >
+    <Label Text="{Binding NOW}" FontSize="Large" HorizontalTextAlignment="Center"/>
+    <Label Text="メニューを選択してポチろ" FontSize="Large" HorizontalTextAlignment="Center"/>
+    <Button Text="バインドのテスト" Command="TestCommand"/>
+  </StackLayout>
 
 </ContentPage>
