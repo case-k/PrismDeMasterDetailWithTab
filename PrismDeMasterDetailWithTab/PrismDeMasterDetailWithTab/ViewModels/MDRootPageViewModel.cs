@@ -41,6 +41,7 @@ namespace PrismDeMasterDetailWithTab.ViewModels
             PochiCommand = new DelegateCommand(Pochi);
             TestCommand = new DelegateCommand(Test);
 
+            // バインドの確認用
             //Device.StartTimer(TimeSpan.FromSeconds(1), () =>
             //{
             //    NOW = DateTime.Now.ToString();
@@ -49,17 +50,17 @@ namespace PrismDeMasterDetailWithTab.ViewModels
         }
 
 
-        private void Pochi()
+        async private void Pochi()
         {
             if (SelectedMenuItem == null)
                 return;
 
-            NOW = SelectedMenuItem.Title;  // ←これが画面に反映されない
+            //NOW = SelectedMenuItem.Title;  // ←これが画面に反映されない ←された
 
-            //var parameters = new NavigationParameters();
-            //parameters["selectedmenuitem"] = SelectedMenuItem;
+            var parameters = new NavigationParameters();
+            parameters["selectedmenuitem"] = SelectedMenuItem;
 
-            //await _navigationService.NavigateAsync("NavigationPage/DetailPage/SubPage", parameters);
+            await _navigationService.NavigateAsync("NavigationPage/DetailPage/SubPage", parameters);
         }
 
         private void Test()
