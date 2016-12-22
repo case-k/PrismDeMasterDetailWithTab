@@ -8,9 +8,9 @@
              Title="MainPage">
 
 
-  <TabbedPage.Padding>
+  <!--<TabbedPage.Padding>
     <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0"/>
-  </TabbedPage.Padding>
+  </TabbedPage.Padding>-->
 
 
   <TabbedPage.Children>

@@ -8,11 +8,11 @@
              Icon="burger.png">
              <!--↑Titleが無いと何故か例外投げてくるので注意-->
 
-  <StackLayout>
+  <StackLayout BackgroundColor="#F0FFFF">
 
     <Label Text="Menu" FontSize="18" Margin="10,36,0,5"/>
 
-    <ListView ItemsSource="{Binding MenuItems}" SelectedItem="{Binding SelectedMenuItem}" VerticalOptions="FillAndExpand">
+    <ListView ItemsSource="{Binding MenuItems}" SelectedItem="{Binding SelectedMenuItem}" VerticalOptions="FillAndExpand" BackgroundColor="Transparent">
       <ListView.ItemTemplate>
         <DataTemplate>
           <TextCell Text="{Binding Title}" Detail="{Binding Detail}" />

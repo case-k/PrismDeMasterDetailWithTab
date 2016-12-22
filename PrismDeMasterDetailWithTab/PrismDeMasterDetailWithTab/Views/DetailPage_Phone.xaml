@@ -6,10 +6,36 @@
              x:Class="PrismDeMasterDetailWithTab.Views.DetailPage_Phone"
              Title="Detail for Phone">
 
-  <StackLayout VerticalOptions="Center" >
+  <StackLayout>
     <Label Text="{Binding NOW}" FontSize="Large" HorizontalTextAlignment="Center"/>
     <Label Text="メニューを選択してポチろ" FontSize="Large" HorizontalTextAlignment="Center"/>
     <Button Text="バインドのテスト" Command="{Binding TestCommand}"/>
+
+    <TableView>
+      <TableRoot>
+        <TableSection Title="タップエリアの確認">
+          <SwitchCell Text="Switch 1" />
+          <SwitchCell Text="Switch 2" />
+          <SwitchCell Text="Switch 3" />
+          <SwitchCell Text="Switch 4" />
+          <SwitchCell Text="Switch 5" />
+          <SwitchCell Text="Switch 6" />
+          <SwitchCell Text="Switch 7" />
+          <SwitchCell Text="Switch 8" />
+          <SwitchCell Text="Switch 9" />
+          <SwitchCell Text="Switch 10" />
+          <SwitchCell Text="Switch 11" />
+          <SwitchCell Text="Switch 12" />
+          <SwitchCell Text="Switch 13" />
+          <SwitchCell Text="Switch 14" />
+          <SwitchCell Text="Switch 15" />
+          <SwitchCell Text="Switch 16" />
+          <SwitchCell Text="Switch 17" />
+          <SwitchCell Text="Switch 18" />
+          <SwitchCell Text="Switch 19" />
+        </TableSection>
+      </TableRoot>
+    </TableView>
   </StackLayout>
 
 </ContentPage>
