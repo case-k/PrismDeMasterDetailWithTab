@@ -8,23 +8,17 @@
              Title="MainPage">
 
 
-  <!--<TabbedPage.Padding>
-    <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0"/>
-  </TabbedPage.Padding>-->
-
-
   <TabbedPage.Children>
 
-    <!--page参照-->
     <views:MDRootPage Title="Page 1" Icon="user.png"/>
 
-    <!--直書き-->
-    <ContentPage Title="Page 2" Icon="users.png" BackgroundColor="#eeffee">
-      <Label Text="ここは Page 2 です"
-             TextColor="#666666"
-             VerticalOptions="Center"
-             HorizontalTextAlignment="Center"/>
-    </ContentPage>
+    <NavigationPage Title="Page 2" Icon="users.png">
+      <x:Arguments>
+        <views:SecondPage/>
+      </x:Arguments>
+    </NavigationPage>    
+
+    <views:ThirdPage Title="Page 3" Icon="users.png"/>
 
   </TabbedPage.Children>
   

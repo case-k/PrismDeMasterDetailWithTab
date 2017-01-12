@@ -36,6 +36,9 @@ namespace PrismDeMasterDetailWithTab
 
             // M/DのDのみを差し替えてみる
             //Container.RegisterTypeForNavigationOnIdiom<DetailPage, MDRootPageViewModel>("DetailPage", phoneView: typeof(DetailPage_Phone), tabletView: typeof(DetailPage));
+
+            Container.RegisterTypeForNavigation<SecondPage>();
+            Container.RegisterTypeForNavigation<ThirdPage>();
         }
     }
 }

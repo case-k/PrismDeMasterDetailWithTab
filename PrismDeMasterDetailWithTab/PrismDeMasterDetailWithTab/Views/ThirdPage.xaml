@@ -3,17 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="PrismDeMasterDetailWithTab.Views.DetailPage_Phone"
-             Title="Detail for Phone">
+             x:Class="PrismDeMasterDetailWithTab.Views.ThirdPage">
 
-  <!--iPhoneだとタブのちょい上まで謎のタップ不能エリアが存在-->
-  <!--不能エリアの高さはナビバーくらい-->
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0"/>
+  </ContentPage.Padding>
   
-
   <StackLayout>
-    <Label Text="{Binding NOW}" FontSize="Large" HorizontalTextAlignment="Center"/>
-    <Label Text="メニューを選択してポチろ" FontSize="Large" HorizontalTextAlignment="Center"/>
-    <Button Text="バインドのテスト" Command="{Binding TestCommand}"/>
+    <Label Text="ContentにStacklayout" FontSize="Large" HorizontalTextAlignment="Center"/>
 
     <TableView>
       <TableRoot>
@@ -37,9 +34,19 @@
           <SwitchCell Text="Switch 17" />
           <SwitchCell Text="Switch 18" />
           <SwitchCell Text="Switch 19" />
+          <SwitchCell Text="Switch 20" />
+          <SwitchCell Text="Switch 21" />
+          <SwitchCell Text="Switch 22" />
+          <SwitchCell Text="Switch 23" />
+          <SwitchCell Text="Switch 24" />
+          <SwitchCell Text="Switch 25" />
+          <SwitchCell Text="Switch 26" />
+          <SwitchCell Text="Switch 27" />
+          <SwitchCell Text="Switch 28" />
+          <SwitchCell Text="Switch 29" />
         </TableSection>
       </TableRoot>
     </TableView>
   </StackLayout>
-
+  
 </ContentPage>

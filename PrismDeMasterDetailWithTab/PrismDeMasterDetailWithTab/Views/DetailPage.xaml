@@ -9,6 +9,7 @@
   <ContentPage.Padding>
     <OnIdiom x:TypeArguments="Thickness" Tablet="0,0,0,50"/>
     <!--iPadだと画面の高さにタブが考慮されないのでpaddingで調整、Xamarinのバグ？？-->
+    <!--調整しないとリストの最下部がタブにめり込んで見えない-->
     <!--iPhoneは大丈夫-->
     <!--Androidは未確認-->
   </ContentPage.Padding>
@@ -17,6 +18,42 @@
     <Label Text="{Binding NOW}" FontSize="Large" HorizontalTextAlignment="Center"/>
     <Label Text="メニューを選択してポチれ" FontSize="Large" HorizontalTextAlignment="Center"/>
     <Button Text="バインドのテスト" Command="{Binding TestCommand}"/>
+
+    <TableView>
+      <TableRoot>
+        <TableSection Title="タップエリアの確認">
+          <SwitchCell Text="Switch 1" />
+          <SwitchCell Text="Switch 2" />
+          <SwitchCell Text="Switch 3" />
+          <SwitchCell Text="Switch 4" />
+          <SwitchCell Text="Switch 5" />
+          <SwitchCell Text="Switch 6" />
+          <SwitchCell Text="Switch 7" />
+          <SwitchCell Text="Switch 8" />
+          <SwitchCell Text="Switch 9" />
+          <SwitchCell Text="Switch 10" />
+          <SwitchCell Text="Switch 11" />
+          <SwitchCell Text="Switch 12" />
+          <SwitchCell Text="Switch 13" />
+          <SwitchCell Text="Switch 14" />
+          <SwitchCell Text="Switch 15" />
+          <SwitchCell Text="Switch 16" />
+          <SwitchCell Text="Switch 17" />
+          <SwitchCell Text="Switch 18" />
+          <SwitchCell Text="Switch 19" />
+          <SwitchCell Text="Switch 20" />
+          <SwitchCell Text="Switch 21" />
+          <SwitchCell Text="Switch 22" />
+          <SwitchCell Text="Switch 23" />
+          <SwitchCell Text="Switch 24" />
+          <SwitchCell Text="Switch 25" />
+          <SwitchCell Text="Switch 26" />
+          <SwitchCell Text="Switch 27" />
+          <SwitchCell Text="Switch 28" />
+          <SwitchCell Text="Switch 29" />
+        </TableSection>
+      </TableRoot>
+    </TableView>
   </StackLayout>
 
 </ContentPage>
