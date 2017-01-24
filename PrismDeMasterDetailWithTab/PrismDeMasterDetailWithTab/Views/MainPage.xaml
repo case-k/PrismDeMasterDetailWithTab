@@ -10,15 +10,15 @@
 
   <TabbedPage.Children>
 
-    <views:MDRootPage Title="Page 1" Icon="user.png"/>
+    <views:MDRootPage Title="Page 1"/>
 
-    <NavigationPage Title="Page 2" Icon="users.png">
+    <NavigationPage Title="Page 2">
       <x:Arguments>
         <views:SecondPage/>
       </x:Arguments>
     </NavigationPage>    
 
-    <views:ThirdPage Title="Page 3" Icon="users.png"/>
+    <views:ThirdPage Title="Page 3"/>
 
   </TabbedPage.Children>
   
