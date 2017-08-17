@@ -44,5 +44,10 @@ namespace PrismDeMasterDetailWithTab.ViewModels
                 Detail = SelectedMenuItem.Detail;
             }
         }
+
+        public void OnNavigatingTo(NavigationParameters parameters)
+        {
+            //throw new NotImplementedException();
+        }
     }
 }

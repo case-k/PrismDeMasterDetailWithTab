@@ -58,7 +58,7 @@ namespace PrismDeMasterDetailWithTab.ViewModels
             //NOW = SelectedMenuItem.Title;  // ←これが画面に反映されない ←された
 
             var parameters = new NavigationParameters();
-            parameters["selectedmenuitem"] = SelectedMenuItem;
+            parameters.Add("selectedmenuitem", SelectedMenuItem);
 
             await _navigationService.NavigateAsync("NavigationPage/DetailPage/SubPage", parameters);
         }
