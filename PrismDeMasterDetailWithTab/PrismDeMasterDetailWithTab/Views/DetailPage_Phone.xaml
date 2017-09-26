@@ -8,8 +8,8 @@
 
   <!--iPhoneだとタブのちょい上まで謎のタップ不能エリアが存在-->
   <!--不能エリアの高さはナビバーくらい-->
-  
 
+  
   <StackLayout>
     <Label Text="{Binding NOW}" FontSize="Large" HorizontalTextAlignment="Center"/>
     <Label Text="メニューを選択してポチろ" FontSize="Large" HorizontalTextAlignment="Center"/>
